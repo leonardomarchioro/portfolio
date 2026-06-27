@@ -2,7 +2,7 @@ export const dictionary = {
   metadata: {
     title: "Leonardo Jose Marchioro Kefer - Desenvolvedor Full Stack",
     description:
-      "Portfolio de Leonardo Jose Marchioro Kefer, desenvolvedor Full Stack especializado em back-end, integracoes e cloud.",
+      "Portfolio de Leonardo Jose Marchioro Kefer, desenvolvedor Full Stack especializado em back-end, integrações e cloud.",
   },
   nav: [
     { label: "Sobre", href: "#about" },
@@ -21,17 +21,18 @@ export const dictionary = {
       number: "01.",
       title: "Sobre mim",
       paragraphs: [
-        "Desenvolvedor Full Stack com quase 5 anos de experiencia, especializado em back-end e integracoes complexas (Meta/WhatsApp API e HubSpot).",
-        "Atuacao estrategica na construcao de solucoes escalaveis, com forte experiencia em arquitetura de integracoes, mensageria e infraestrutura cloud na AWS.",
+        "Desenvolvedor Full Stack com quase 5 anos de experiência, especializado em back-end e integrações complexas (Meta/WhatsApp API e HubSpot).",
+        "Atuação estratégica na construção de soluções escaláveis, com forte experiência em arquitetura de integrações, mensageria e infraestrutura cloud na AWS.",
       ],
     },
     tech: {
       number: "02.",
       title: "Tech Stack",
+      learning: "Aprendendo",
     },
     certifications: {
       number: "03.",
-      title: "Certificações"
+      title: "Certificações",
     },
     contact: {
       number: "04.",
@@ -53,7 +54,7 @@ export const dictionary = {
       submit: "Enviar mensagem",
       submitting: "Enviando...",
       success: "Mensagem enviada com sucesso.",
-      error: "Nao foi possivel enviar. Tente novamente.",
+      error: "Nao foi possível enviar. Tente novamente.",
     },
   },
   footer: {

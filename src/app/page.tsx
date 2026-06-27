@@ -33,7 +33,7 @@ export default function Home({ searchParams }: PageProps) {
       <main className="pb-[120px] pt-32 max-[520px]:pb-20 max-[520px]:pt-[104px]">
         <HeroSection content={t.hero} />
         <AboutSection content={t.sections.about} />
-        <TechSection content={t.sections.tech} items={g.techStack} />
+        <TechSection content={t.sections.tech} items={g.techStack} learning={t.sections.tech.learning} />
         <CertificationsSection content={t.sections.certifications} items={g.certifications} />
         <ContactForm content={t.sections.contact} formId={formId} />
       </main>

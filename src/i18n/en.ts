@@ -28,6 +28,7 @@ export const dictionary = {
     tech: {
       number: "02.",
       title: "Tech Stack",
+      learning: "Learning",
     },
     certifications: {
       number: "03.",
