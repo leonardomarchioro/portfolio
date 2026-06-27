@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --theme-background: #131313;
+  --theme-background-subtle: #121212;
+  --theme-surface: #1c1b1b;
+  --theme-surface-raised: #1e1e1e;
+  --theme-surface-strong: #201f1f;
+  --theme-surface-muted: #353534;
+  --theme-text: #e5e2e1;
+  --theme-text-muted: #c2c6d6;
+  --theme-border: #424754;
+  --theme-primary: #3b82f6;
+  --theme-primary-hover: #4d8eff;
+  --theme-primary-contrast: #ffffff;
+  --theme-selection-text: #001a42;
+  --theme-success: #8fd7a2;
+  --theme-error: #ffb4ab;
+}
+
+[data-theme="light"] {
+  --theme-background: #f8fafc;
+  --theme-background-subtle: #eef2f7;
+  --theme-surface: #ffffff;
+  --theme-surface-raised: #ffffff;
+  --theme-surface-strong: #f1f5f9;
+  --theme-surface-muted: #d8dee9;
+  --theme-text: #172033;
+  --theme-text-muted: #526174;
+  --theme-border: #c7d0dd;
+  --theme-primary: #005ac2;
+  --theme-primary-hover: #004395;
+  --theme-primary-contrast: #ffffff;
+  --theme-selection-text: #ffffff;
+  --theme-success: #166534;
+  --theme-error: #b42318;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--theme-background);
+  color: var(--theme-text);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--theme-primary-hover);
+  color: var(--theme-selection-text);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--theme-background-subtle);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-surface-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-border);
+}
