@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { locale, t } from "@/i18n";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: t.metadata.title,
@@ -30,6 +31,7 @@ export default function RootLayout({
       </head>
       <body className="bg-background font-sans text-text antialiased selection:bg-primary-hover selection:text-[var(--theme-selection-text)]">
         {children}
+        <Analytics />
       </body>
     </html>
   );
