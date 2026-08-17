@@ -7,6 +7,7 @@ export const dictionary = {
   nav: [
     { label: "Sobre", href: "#about" },
     { label: "Tech", href: "#tech" },
+    { label: "Projetos", href: "#projects" },
     { label: "Certificações", href: "#certifications" },
     { label: "Contato", href: "#contact-form" },
   ],
@@ -30,12 +31,16 @@ export const dictionary = {
       title: "Tech Stack",
       learning: "Aprendendo",
     },
-    certifications: {
+    projects: {
       number: "03.",
+      title: "Projetos",
+    },
+    certifications: {
+      number: "04.",
       title: "Certificações",
     },
     contact: {
-      number: "04.",
+      number: "05.",
       title: "Entrar em contato",
       fields: {
         name: {

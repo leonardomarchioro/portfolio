@@ -4,6 +4,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
+import { ProjectsSection } from "@/components/ProjectsSection";
 import { TechSection } from "@/components/TechSection";
 import { getTranslation } from "@/i18n";
 import type { Metadata } from "next";
@@ -34,6 +35,7 @@ export default function Home({ searchParams }: PageProps) {
         <HeroSection content={t.hero} />
         <AboutSection content={t.sections.about} />
         <TechSection content={t.sections.tech} items={g.techStack} learning={t.sections.tech.learning} />
+        <ProjectsSection content={t.sections.projects} items={g.projects} />
         <CertificationsSection content={t.sections.certifications} items={g.certifications} />
         <ContactForm content={t.sections.contact} formId={formId} />
       </main>
