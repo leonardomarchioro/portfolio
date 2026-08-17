@@ -20,6 +20,20 @@ export const generals = {
   ],
   projects: [
     {
+      title: "Atlas Board",
+      description:
+        "Aplicação de quadro colaborativo para organizar tarefas, convites e fluxo de trabalho em times.",
+      href: "https://github.com/leonardomarchioro/atlas-board",
+      icon: "server",
+    },
+    {
+      title: "A3 1º Semestre",
+      description:
+        "Projeto acadêmico desenvolvido no primeiro semestre, reunindo prática de programação, documentação e entrega em equipe.",
+      href: "https://github.com/leonardomarchioro/a3-1-semestre",
+      icon: "code",
+    },
+    {
       title: "Sistema de Integrações",
       description:
         "Arquitetura para conectar APIs externas, filas e serviços internos com foco em rastreabilidade e escalabilidade.",
