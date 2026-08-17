@@ -20,39 +20,14 @@ export const generals = {
   ],
   projects: [
     {
-      title: "Atlas Board",
-      description:
-        "Aplicação de quadro colaborativo para organizar tarefas, convites e fluxo de trabalho em times.",
+      key: "atlasBoard",
       href: "https://github.com/leonardomarchioro/atlas-board",
       icon: "server",
     },
     {
-      title: "A3 1º Semestre",
-      description:
-        "Projeto acadêmico desenvolvido no primeiro semestre, reunindo prática de programação, documentação e entrega em equipe.",
+      key: "employeeManagement",
       href: "https://github.com/leonardomarchioro/a3-1-semestre",
       icon: "code",
-    },
-    {
-      title: "Sistema de Integrações",
-      description:
-        "Arquitetura para conectar APIs externas, filas e serviços internos com foco em rastreabilidade e escalabilidade.",
-      href: "https://github.com/leonardomarchioro",
-      icon: "server",
-    },
-    {
-      title: "Hub de Automação",
-      description:
-        "Fluxos automatizados para reduzir tarefas manuais, padronizar operações e acelerar rotinas de atendimento.",
-      href: "https://github.com/leonardomarchioro",
-      icon: "code",
-    },
-    {
-      title: "Portfolio Next.js",
-      description:
-        "Portfolio pessoal com Next.js, TypeScript, Tailwind CSS, internacionalização e formulário de contato.",
-      href: "https://github.com/leonardomarchioro",
-      icon: "github",
     },
   ],
   certifications: [

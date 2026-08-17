@@ -34,6 +34,18 @@ export const dictionary = {
     projects: {
       number: "03.",
       title: "Projetos",
+      items: {
+        atlasBoard: {
+          title: "Atlas Board",
+          description:
+            "Aplicação de quadro colaborativo para organizar tarefas, convites e fluxo de trabalho em times.",
+        },
+        employeeManagement: {
+          title: "Sistema de Gestão de Funcionários",
+          description:
+            "Projeto acadêmico desenvolvido no primeiro semestre, reunindo prática de programação, documentação e entrega em equipe.",
+        },
+      },
     },
     certifications: {
       number: "04.",

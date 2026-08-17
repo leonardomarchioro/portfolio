@@ -84,14 +84,17 @@ test("portfolio renders the projects section in Portuguese and English", async (
 
     assert.match(pt, /href="#projects"/);
     assert.match(pt, /Projetos/);
-    assert.match(pt, /Sistema de Integrações/);
+    assert.match(pt, /Sistema de Gestão de Funcionários/);
+    assert.match(pt, /Aplicação de quadro colaborativo/);
     assert.match(pt, /https:\/\/github\.com\/leonardomarchioro\/atlas-board/);
     assert.match(pt, /https:\/\/github\.com\/leonardomarchioro\/a3-1-semestre/);
     assert.match(pt, /GitHub/);
 
     assert.match(en, /href="#projects"/);
     assert.match(en, /Projects/);
-    assert.match(en, /Sistema de Integrações/);
+    assert.match(en, /Employee Management System/);
+    assert.match(en, /Collaborative board application/);
+    assert.doesNotMatch(en, /Sistema de Gestão de Funcionários/);
     assert.match(en, /https:\/\/github\.com\/leonardomarchioro\/atlas-board/);
     assert.match(en, /https:\/\/github\.com\/leonardomarchioro\/a3-1-semestre/);
   });

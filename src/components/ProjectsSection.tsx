@@ -24,13 +24,14 @@ export function ProjectsSection({ content, items }: ProjectsSectionProps) {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {items.map((item) => {
           const Icon = icons[item.icon];
+          const projectContent = content.items[item.key];
 
           return (
             <a
-              aria-label={`${item.title} - GitHub`}
+              aria-label={`${projectContent.title} - GitHub`}
               className="group flex min-h-[220px] flex-col rounded border border-surface-muted bg-surface-raised p-6 transition-colors hover:border-primary"
               href={item.href}
-              key={item.title}
+              key={item.key}
               rel="noreferrer"
               target="_blank"
             >
@@ -48,10 +49,10 @@ export function ProjectsSection({ content, items }: ProjectsSectionProps) {
                 />
               </div>
               <h4 className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.05em] text-text">
-                {item.title}
+                {projectContent.title}
               </h4>
               <p className="m-0 flex-1 text-sm leading-relaxed text-text-muted">
-                {item.description}
+                {projectContent.description}
               </p>
               <span className="mt-6 font-code text-xs text-primary">GitHub</span>
             </a>

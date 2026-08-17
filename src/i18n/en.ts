@@ -34,6 +34,18 @@ export const dictionary = {
     projects: {
       number: "03.",
       title: "Projects",
+      items: {
+        atlasBoard: {
+          title: "Atlas Board",
+          description:
+            "Collaborative board application for organizing tasks, invitations, and team workflows.",
+        },
+        employeeManagement: {
+          title: "Employee Management System",
+          description:
+            "Academic first-semester project combining programming practice, documentation, and team delivery.",
+        },
+      },
     },
     certifications: {
       number: "04.",
