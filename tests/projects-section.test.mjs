@@ -59,16 +59,17 @@ async function withServer(run) {
     await waitForServer(server);
     await run();
   } finally {
-    stopServer(server);
+    await stopServer(server);
     await Promise.race([once(server, "exit"), delay(5_000)]);
   }
 }
 
-function stopServer(server) {
+async function stopServer(server) {
   if (process.platform === "win32" && server.pid) {
-    spawn("taskkill", ["/pid", String(server.pid), "/t", "/f"], {
+    const killer = spawn("taskkill", ["/pid", String(server.pid), "/t", "/f"], {
       stdio: "ignore",
     });
+    await Promise.race([once(killer, "exit"), delay(5_000)]);
     return;
   }
 
@@ -87,8 +88,11 @@ test("portfolio renders the projects section in Portuguese and English", async (
     assert.match(pt, /Sistema de Gestão de Funcionários/);
     assert.match(pt, /Aplicação de quadro colaborativo/);
     assert.match(pt, /https:\/\/github\.com\/leonardomarchioro\/atlas-board/);
+    assert.match(pt, /https:\/\/atlas-board-demo\.vercel\.app/);
+    assert.match(pt, /aria-label="Atlas Board - Demo"/);
     assert.match(pt, /https:\/\/github\.com\/leonardomarchioro\/a3-1-semestre/);
     assert.match(pt, /GitHub/);
+    assert.doesNotMatch(pt, /aria-label="Sistema de Gestão de Funcionários - Demo"/);
 
     assert.match(en, /href="#projects"/);
     assert.match(en, /Projects/);
@@ -96,6 +100,9 @@ test("portfolio renders the projects section in Portuguese and English", async (
     assert.match(en, /Collaborative board application/);
     assert.doesNotMatch(en, /Sistema de Gestão de Funcionários/);
     assert.match(en, /https:\/\/github\.com\/leonardomarchioro\/atlas-board/);
+    assert.match(en, /https:\/\/atlas-board-demo\.vercel\.app/);
+    assert.match(en, /aria-label="Atlas Board - Demo"/);
     assert.match(en, /https:\/\/github\.com\/leonardomarchioro\/a3-1-semestre/);
+    assert.doesNotMatch(en, /aria-label="Employee Management System - Demo"/);
   });
 });

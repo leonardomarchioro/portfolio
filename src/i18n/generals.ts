@@ -22,6 +22,7 @@ export const generals = {
     {
       key: "atlasBoard",
       href: "https://github.com/leonardomarchioro/atlas-board",
+      demoHref: "https://atlas-board-demo.vercel.app",
       icon: "server",
     },
     {

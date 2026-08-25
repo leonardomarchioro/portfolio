@@ -25,15 +25,12 @@ export function ProjectsSection({ content, items }: ProjectsSectionProps) {
         {items.map((item) => {
           const Icon = icons[item.icon];
           const projectContent = content.items[item.key];
+          const demoHref = "demoHref" in item ? item.demoHref : undefined;
 
           return (
-            <a
-              aria-label={`${projectContent.title} - GitHub`}
-              className="group flex min-h-[220px] flex-col rounded border border-surface-muted bg-surface-raised p-6 transition-colors hover:border-primary"
-              href={item.href}
+            <article
+              className="group flex min-h-[220px] flex-col rounded border border-surface-muted bg-surface-raised p-6 transition-colors hover:border-primary focus-within:border-primary"
               key={item.key}
-              rel="noreferrer"
-              target="_blank"
             >
               <div className="mb-6 flex items-center justify-between">
                 <div
@@ -42,11 +39,6 @@ export function ProjectsSection({ content, items }: ProjectsSectionProps) {
                 >
                   <Icon size={24} />
                 </div>
-                <ExternalLink
-                  aria-hidden="true"
-                  className="text-text-muted transition-colors group-hover:text-primary"
-                  size={18}
-                />
               </div>
               <h4 className="mb-3 font-display text-sm font-semibold uppercase tracking-[0.05em] text-text">
                 {projectContent.title}
@@ -54,8 +46,31 @@ export function ProjectsSection({ content, items }: ProjectsSectionProps) {
               <p className="m-0 flex-1 text-sm leading-relaxed text-text-muted">
                 {projectContent.description}
               </p>
-              <span className="mt-6 font-code text-xs text-primary">GitHub</span>
-            </a>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  aria-label={`${projectContent.title} - GitHub`}
+                  className="inline-flex items-center gap-2 font-code text-xs text-primary transition-colors hover:text-text focus:outline-none focus-visible:text-text"
+                  href={item.href}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <Github aria-hidden="true" size={14} />
+                  GitHub
+                </a>
+                {demoHref ? (
+                  <a
+                    aria-label={`${projectContent.title} - Demo`}
+                    className="inline-flex items-center gap-2 font-code text-xs text-primary transition-colors hover:text-text focus:outline-none focus-visible:text-text"
+                    href={demoHref}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <ExternalLink aria-hidden="true" size={14} />
+                    Demo
+                  </a>
+                ) : null}
+              </div>
+            </article>
           );
         })}
       </div>
